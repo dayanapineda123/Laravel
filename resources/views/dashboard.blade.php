@@ -14,6 +14,8 @@
             </div>
         </div>
     </div>
+<a href="{{ route('categorias.index') }} " >categorias</a>
+<a heref="{{route('categorias.index') }}">Subcategoria</a>
+<a heref="{{route('categorias.index') }}">Productos</a>
+<a heref="{{route('categorias.index') }}">Usuarios</a>
 </x-app-layout>
-<a href="{{ route('categias.index') }} " >categias</a>
-<a heref="{{route('categoria.index') }}">Subcategoria</a>

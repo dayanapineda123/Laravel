@@ -15,6 +15,12 @@ Route::get('/', function(){
 
 });
 
+Route::get('/', function(){
+    return view('welcome');
+
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -37,11 +43,5 @@ Route::Resource('usuarios', UserController::class);
 Route::middleware('auth', 'admin')->group(function () {
     Route::resource('usuarios', UserController::class);
 });
-
-Route::middleware(['auth','coordinador'])->group((function(){
-    Route::resource('productos', ProductoController::class)->except(['destroy']);
-    Route::resource('productos', Subcategoria::class)->except(['destroy']);
-    Route::resource('productos', CategoriaController::class)->except(['destroy']);
-}));
 
 require __DIR__ . '/auth.php';
